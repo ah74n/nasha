@@ -106,13 +106,16 @@
 
     <script>
         const blogData = [
-            { id: 0, title: "How AI Actually Thinks", cat: "AI Security", date: "May 18, 2026", desc: "GPT-3 alone was trained on data that would take a human 2,600 years to read nonstop", 
+            { id: 0, title: "How AI Actually Thinks", cat: "AI Security", date: "May 19, 2026", desc: "GPT-3 alone was trained on data that would take a human 2,600 years to read nonstop", 
             content: "Everyone uses AI, but few know how it works under the hood. It turns out, models like ChatGPT aren't actually thinking they are just massive next word prediction engines,When an LLM trains on text that would take a human 2,600 years to read, it doesn't read word-by-word. It uses Transformer Neural Networks to process whole libraries at once, assigning mathematical Attention Scores to understand context. When you type a prompt, the AI simply calculates the highest probability of what word should come next.Because AI relies entirely on data patterns it is incredibly fragile Attackers can corrupt the training data Data Poisoning or inject subtle noise to trick live models Adversarial Evasion As industries rush to adopt AI the next big cyber battlefield isn't just about blocking malware it is about protecting the data that feeds the machines" },
+           
+            { id: 1, title: "The $2.2M Security Weapon: Why Defenders Must Embrace AI", cat: "AI Security", date: "May 20, 2026", desc: "The ROI of AI in Modern Cyber Defense", 
+            content: "Hackers might be using smarter tools, but the real advantage still belongs to the defenders. According to IBM’s latest report, organizations utilizing automated security operations save an average of $2.2 Million during a breach and cut containment times by 108 days. Systems like Splunk parse massive network anomalies at speeds humans can't match, flagging hidden indicators instantly.Advanced modeling flags obscure patterns and simulates outlier attack paths that teams often overlook during routine manual checks.The Catch: Right now, only 24% of these advanced initiatives are actually secured. Deploying smart tools without strict access frameworks like ISO/IEC 27090, MFA, or RBAC just opens up new vulnerabilities. To stay ahead, the focus needs to shift toward hardening the data pipelines themselves." },
             
         ];
 
         // 1. Render Most Recent Blog on the Left Div
-        const recentBlog = blogData[0]; // Gets the newest blog
+        const recentBlog = blogData[1]; // Gets the newest blog
         const recentContainer = document.getElementById('recent-blog-container');
         recentContainer.innerHTML = `
             <div class="p-8 md:p-20 cursor-pointer" onclick="openBlog(${recentBlog.id})">
