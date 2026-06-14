@@ -154,11 +154,17 @@
              content:`The promise of Generative AI is built on its ability to follow instructions, but that same core functionality has introduced a critical security loophole known as Prompt Injection. Unlike traditional software exploits that target vulnerabilities in code, prompt injection targets the way an AI processes information. It works by embedding malicious, hidden commands into the text or "tokens" that an AI model consumes. These injections fall into two categories: Direct, where a user manually overrides the system to force unintended behaviors, and Indirect, a far more dangerous "zero-click" attack where the AI unknowingly absorbs malicious instructions from untrusted external sources like emails, web pages, or documents.
              Because language models treat all incoming data as a single stream of context rather than separating "commands" from "content," they often lack the architectural boundaries needed to distinguish between a developer's security policy and an attacker's crafted request. As organizations increasingly grant AI agents the power to access sensitive databases, browse the internet, and execute scripts, these injections have moved from being theoretical parlor tricks to high-stakes security threats, potentially leading to unauthorized data leaks, system compromise, and the silent manipulation of trusted AI outputs.`
             },
+            {
+              id: 6,
+              title: "Pickle vs Safetensors",
+              date: "14 June 2026",
+              desc: "reating a Python .pkl file like a harmless asset is a critical security flaw. That is why .safetensors is the new standard",
+              content: "When deploying machine learning models, the file format you choose fundamentally dictates your security posture. Python’s standard .pkl (pickle) format serializes both data and execution logic, meaning a backdoored model can silently execute arbitrary malware like a reverse shell the exact millisecond it is loaded into memory. To neutralize this threat, the industry standard has shifted to .safetensors, a secure alternative that stores only pure mathematical weights and JSON metadata with strictly zero execution capabilities. By recognizing that traditional model weights can act as hidden executables and strictly enforcing the use of .safetensors over .pkl, security teams can effectively eliminate one of the most critical arbitrary code execution vulnerabilities in the modern AI supply chain",
         
         ];
 
         // 1. Render Most Recent Blog on the Left Div
-        const recentBlog = blogData[4]; // Gets the newest blog
+        const recentBlog = blogData[6]; // Gets the newest blog
         const recentContainer = document.getElementById('recent-blog-container');
         recentContainer.innerHTML = `
             <div class="p-8 md:p-20 cursor-pointer" onclick="openBlog(${recentBlog.id})">
