@@ -136,8 +136,11 @@
 
     <script>
         const blogData = [
-            { id: 0, title: "How AI Actually Thinks", cat: "AI Security", date: "May 18, 2026", desc: "GPT-3 alone was trained on data that would take a human 2,600 years to read nonstop", 
-            content: "Everyone uses AI, but few know how it works under the hood. It turns out, models like ChatGPT aren't actually thinking they are just massive next word prediction engines,When an LLM trains on text that would take a human 2,600 years to read, it doesn't read word-by-word. It uses Transformer Neural Networks to process whole libraries at once, assigning mathematical Attention Scores to understand context. When you type a prompt, the AI simply calculates the highest probability of what word should come next.Because AI relies entirely on data patterns it is incredibly fragile Attackers can corrupt the training data Data Poisoning or inject subtle noise to trick live models Adversarial Evasion As industries rush to adopt AI the next big cyber battlefield isn't just about blocking malware it is about protecting the data that feeds the machines" },
+            { id: 0,
+             title: "How AI Actually Thinks",
+             cat: "AI Security", date: "May 18, 2026",
+             desc: "GPT-3 alone was trained on data that would take a human 2,600 years to read nonstop", 
+             content: "Everyone uses AI, but few know how it works under the hood. It turns out, models like ChatGPT aren't actually thinking they are just massive next word prediction engines,When an LLM trains on text that would take a human 2,600 years to read, it doesn't read word-by-word. It uses Transformer Neural Networks to process whole libraries at once, assigning mathematical Attention Scores to understand context. When you type a prompt, the AI simply calculates the highest probability of what word should come next.Because AI relies entirely on data patterns it is incredibly fragile Attackers can corrupt the training data Data Poisoning or inject subtle noise to trick live models Adversarial Evasion As industries rush to adopt AI the next big cyber battlefield isn't just about blocking malware it is about protecting the data that feeds the machines" },
             { id: 1, title: "The $2.2M Security Weapon: Why Defenders Must Embrace AI", cat: "AI Security", date: "May 19, 2026", desc: "The ROI of AI in Modern Cyber Defense", 
             content: "Hackers might be using smarter tools, but the real advantage still belongs to the defenders. According to IBM’s latest report, organizations utilizing automated security operations save an average of $2.2 Million during a breach and cut containment times by 108 days. Systems like Splunk parse massive network anomalies at speeds humans can't match, flagging hidden indicators instantly.Advanced modeling flags obscure patterns and simulates outlier attack paths that teams often overlook during routine manual checks.The Catch: Right now, only 24% of these advanced initiatives are actually secured. Deploying smart tools without strict access frameworks like ISO/IEC 27090, MFA, or RBAC just opens up new vulnerabilities. To stay ahead, the focus needs to shift toward hardening the data pipelines themselves." },
             { id: 2, title: "AI vs AI Cyber Battle", cat: "AI security", date: "May 20, 2026", desc: "DarkBERT vs FraudGPT: The Dawn of Machine-on-Machine Warfare",
@@ -149,6 +152,7 @@
             {
              id: 5,
              title: "AI’s Silent Vulnerability",
+             cat:"AI ",
              date: "June 06, 2026",
              desc:"Prompt Injection: The invisible command that hijacks logic",
              content:`The promise of Generative AI is built on its ability to follow instructions, but that same core functionality has introduced a critical security loophole known as Prompt Injection. Unlike traditional software exploits that target vulnerabilities in code, prompt injection targets the way an AI processes information. It works by embedding malicious, hidden commands into the text or "tokens" that an AI model consumes. These injections fall into two categories: Direct, where a user manually overrides the system to force unintended behaviors, and Indirect, a far more dangerous "zero-click" attack where the AI unknowingly absorbs malicious instructions from untrusted external sources like emails, web pages, or documents.
@@ -157,10 +161,10 @@
             {
               id: 6,
               title: "Pickle vs Safetensors",
+              cat: "AI suplly chain",
               date: "14 June 2026",
               desc: "reating a Python .pkl file like a harmless asset is a critical security flaw. That is why .safetensors is the new standard",
-              content: `When deploying machine learning models, the file format you choose fundamentally dictates your security posture. Python’s standard .pkl (pickle) format serializes both data and execution logic, meaning a backdoored model can silently execute arbitrary malware like a reverse shell the exact millisecond it is loaded into memory. To neutralize this threat, the industry standard has shifted to .safetensors, a secure alternative that stores only pure mathematical weights and JSON metadata with strictly zero execution capabilities. By recognizing that traditional model weights can act as hidden executables and strictly enforcing the use of .safetensors over .pkl, security teams can effectively eliminate one of the most critical arbitrary code execution vulnerabilities in the modern AI supply chain",
-        
+              content: `When deploying machine learning models, the file format you choose fundamentally dictates your security posture. Python’s standard .pkl (pickle) format serializes both data and execution logic, meaning a backdoored model can silently execute arbitrary malware like a reverse shell the exact millisecond it is loaded into memory. To neutralize this threat, the industry standard has shifted to .safetensors, a secure alternative that stores only pure mathematical weights and JSON metadata with strictly zero execution capabilities. By recognizing that traditional model weights can act as hidden executables and strictly enforcing the use of .safetensors over .pkl, security teams can effectively eliminate one of the most critical arbitrary code execution vulnerabilities in the modern AI supply chain"`        
         ];
 
         // 1. Render Most Recent Blog on the Left Div
